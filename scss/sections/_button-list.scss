@@ -1,0 +1,141 @@
+.button__list{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.port__button{
+    display: flex;
+    white-space: nowrap;
+    padding: 6px 22px;
+    color: $maincolor-color;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.62; /* 162.5% */
+    letter-spacing: 0.48px;
+    border-radius: 4px;
+    border: none;
+    background: #F5F4FA;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color,background,box-shadow;
+    transition-duration: 250ms ;
+
+&:focus,
+&:hover{
+    color: #FFF;
+    border-radius: 4px;
+    background: #2196F3;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.62; /* 162.5% */
+    letter-spacing: 0.48px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+    border: none;
+}
+}
+
+
+// ==================================================================================================================================
+
+.card{
+    flex-basis: calc((100% - 60px) / 3);
+    border: 1px solid $title-color;
+    /* position: relative; */
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border,box-shadow,;
+    transition-duration: 250ms ;
+
+    &:hover{
+        flex-basis: calc((100% - 60px) / 3);
+        border: 1px solid $title-color;
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+        .card__text__port{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+    
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    &__title__port{
+        overflow: hidden;
+        position: relative;
+    }
+    
+    &__img{
+        width: 100%;
+    }
+    
+    &__text__port{
+        background: rgba(33, 150, 243, 0.90);
+        color: $title-color;
+        width: 370px;
+        height: 294px; 
+        text-align: center;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.55; /* 155.556% */
+        letter-spacing: 0.54px;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateY(100%);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-property: opacity , transform;
+        transition-duration: 250ms ;
+        padding: 63px 24px  63px  24px&    
+}
+}
+
+.tovar__titlee{
+    border: 1px solid var(--ramborder-color);
+    box-sizing: border-box;
+    padding: 20px 24px;
+    
+}
+
+.button__navigate{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 8px;
+}
+
+.name__port{
+    color: $maincolor-color;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 36px; /* 200% */
+    letter-spacing: 1.08px;
+ }
+    
+    .work__port{
+        color: $numberline-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px; /* 187.5% */
+    letter-spacing: 0.48px;
+ }
+    
+
+
+.address__tel__port{
+    color: $maincolor-color;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+}
+
+
+.address__visited__port{
+    color: $mainlogo-color;
+}
