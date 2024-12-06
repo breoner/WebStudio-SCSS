@@ -135,63 +135,25 @@ body {
   gap: 50px;
 }
 .address__list {
+  display: flex;
+  align-items: center;
   color: #757575;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.28px;
-  width: 16px;
-  height: 12px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, fill;
-  transition-duration: 250ms;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address__list:hover, .address__list:focus {
   color: #2196F3;
 }
-.address__list:hover .address-svgh, .address__list:focus .address-svgh {
-  width: 16px;
-  height: 12px;
-  fill: #2196F3;
-}
-.address__list2 {
-  color: #757575;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.28px;
-  width: 16px;
-  height: 12px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, fill;
-  transition-duration: 250ms;
-}
 .address__svgh {
   width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, fill;
-  transition-duration: 250ms;
-}
-.address__list2:hover, .address__list2:focus {
-  color: #2196F3;
-}
-.address__list2:hover .address-svgh2, .address__list2:focus .address-svgh2 {
-  width: 10px;
-  height: 16px;
-  fill: #2196F3;
-}
-.address__svgh2 {
-  width: 10px;
   height: 16px;
   margin-right: 10px;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, fill;
-  transition-duration: 250ms;
-}
-.address__svgh:hover, .address__svgh:focus {
-  fill: #2196F3;
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main__hero {

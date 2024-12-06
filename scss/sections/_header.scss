@@ -115,83 +115,35 @@
 }
 
 
-.address{
+.address {
     display: flex;
     align-items: center;
     box-sizing: border-box;
     margin-left: auto;
     gap: 50px;
 
-    &__list{
-        color: $numberline-color;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.28px;
-    width: 16px;
-    height: 12px;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: color,fill;
-    transition-duration: 250ms ;
+    &__list {
+        display: flex; 
+        align-items: center;
+        color: $numberline-color; 
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.14;
+        letter-spacing: 0.28px;
+        text-decoration: none; 
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
+
     &__list:hover,
-    &__list:focus{
-      color: $mainlogo-color;
-      .address-svgh{
-        width: 16px;
-        height: 12px;
-        fill: #2196F3;
-      }
-}
-
-    &__list2{
-        color: $numberline-color;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.28px;
-    width: 16px;
-    height: 12px;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: color,fill;
-    transition-duration: 250ms ;
+    &__list:focus {
+        color: $mainlogo-color; 
     }
 
-    &__svgh{
+    &__svgh {
         width: 16px;
-        height: 12px;
-        margin-right: 10px;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-property: color,fill;
-    transition-duration: 250ms ;
-    }
-
-&__list2:hover,
-&__list2:focus{
-      color: $mainlogo-color;
-      .address-svgh2{
-        width: 10px;
         height: 16px;
-        fill: #2196F3;
-      }
+        margin-right: 10px; 
+        fill: currentColor; 
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    }
 }
-
-
-&__svgh2{
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: color,fill;
-transition-duration: 250ms ;
-}
-
-
-
-&__svgh:hover,
-&__svgh:focus{
-    fill: $mainlogo-color;
-}
-}
-
