@@ -1,25 +1,19 @@
 
 .project{
-    padding-top: 94px;
+    padding: 60px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 0;
+    }
 
     &__main{
         display: flex;
         box-sizing: border-box;
+        flex-wrap: wrap;
         gap: 30px;
     }
 
-    &__name{
-        margin-bottom: 10px;
-    }
-
-    &__name{
-        color: $maincolor-color;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.14;
-    letter-spacing: 0.42px;
-    text-transform: uppercase;
-    }
 
     &__item::before{
         content: "";
@@ -27,48 +21,53 @@
         width: 270px;
         height: 120px;
         margin-bottom: 30px;
-        background-color: $greylic-color;
-        background-image: url(../img/antenna.png);
+        background-color: $sectionbg-color;
         background-position: center;
-        background-repeat: no-repeat;  
+        background-repeat: no-repeat;
+        
+        @media screen and (min-width: 768px) {
+            width: 354px;
+          }
+
+          @media screen and (min-width: 1200px) {
+            width: 270px;
+          }
     }
 
-    &__item2::before{
-        content: "";
-        display: block;
-        width: 270px;
-        height: 120px;
-        margin-bottom: 30px;
-        background-color: $greylic-color;
+    &__item:first-child::before{
+        background-image: url(../img/antenna.png); 
+  
+    }
+
+    &__item:nth-child(2):before{
         background-image: url(../img/clock.png);
-        background-position: center;
-        background-repeat: no-repeat;  
+
     }
 
-    &__item3::before{
-        content: "";
-        display: block;
-        width: 270px;
-        height: 120px;
-        margin-bottom: 30px;
-        background-color: $greylic-color;
-        background-image: url(../img/diagram.png);
-        background-position: center;
-        background-repeat: no-repeat;  
+    &__item:nth-child(3)::before{
+        background-image: url(../img/diagram.png); 
     }
 
-    &__item4::before{
-        content: "";
-        display: block;
-        width: 270px;
-        height: 120px;
-        margin-bottom: 30px;
-        background-color: $greylic-color;
+    &__item:last-child::before{
         background-image: url(../img/astronaut.png);
-        background-position: center;
-        background-repeat: no-repeat;  
+
     }
     
+
+    &__name{
+        color: $maincolor-color;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.14;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+
+        @media screen and (min-width: 768px) {
+            text-align: start;
+          }
+    }
 
     &__tag{
         color: $numberline-color;
@@ -76,6 +75,14 @@
     font-weight: 400;
     line-height: 1.71; /* 171.429% */
     letter-spacing: 0.42px;
+
+    @media screen and (min-width: 768px) {
+        width: 354px;
+      }
+      
+      @media screen and (min-width: 1200px) {
+        width: 270px;
+      }
     }
 }
 
