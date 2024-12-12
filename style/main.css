@@ -1,5 +1,6 @@
 @charset "UTF-8";
-h1, h2, h3, p {
+ul {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -10,12 +11,13 @@ a {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
-ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
+h1, h2, h3, p {
+  margin: 0;
 }
 
 body {
@@ -24,10 +26,10 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  box-sizing: border-box;
+  outline: 1px solid red;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -316,7 +318,7 @@ body {
   display: block;
   width: 270px;
   height: 120px;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
   background-color: #F5F4FA;
   background-position: center;
   background-repeat: no-repeat;
@@ -534,7 +536,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 .client__loyal {
   color: #212121;
@@ -549,7 +550,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 22px;
+  gap: 30px;
 }
 .client__link {
   border-radius: 4px;
@@ -579,6 +580,13 @@ body {
   background-color: #2F303A;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer > .container {
+  display: flex;
+  align-items: first baseline;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
 }
 .footer__web {
   color: white;
