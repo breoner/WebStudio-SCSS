@@ -71,7 +71,6 @@ h1, h2, h3, p {
   line-height: 1.38;
   letter-spacing: 0.72px;
   margin-right: auto;
-  animation: logo-scale 5000ms alternate infinite;
 }
 @media screen and (min-width: 768px) {
   .header__logo {
