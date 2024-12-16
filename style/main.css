@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto";
 }
@@ -180,7 +181,7 @@ h1, h2, h3, p {
 .curent::after {
   content: "";
   display: block;
-  opacity: 0;
+  opacity: 1;
   border-radius: 2px;
   background-color: #2196f3;
   width: 100%;
@@ -188,12 +189,10 @@ h1, h2, h3, p {
   position: absolute;
   top: 49px;
   left: 0;
-  transition: 550ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(0);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .curent:hover::after {
   opacity: 1;
-  transform: scale(1);
 }
 
 .hero {
@@ -985,11 +984,21 @@ h1, h2, h3, p {
   gap: 30px;
 }
 .card__item {
-  flex-basis: calc((100% - 60px) / 3);
+  flex-basis: calc((100% - 60px) / 1);
   border: 1px solid #eeeeee;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .card__item {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 .card__item:hover {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
@@ -1041,11 +1050,29 @@ h1, h2, h3, p {
   letter-spacing: 0.48px;
 }
 
+.button__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
 .button__list {
   display: flex;
   gap: 8px;
   justify-content: center;
   margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .button__list button:nth-child(1),
+  .button__list button:nth-child(2),
+  .button__list button:nth-child(3) {
+    flex: 1 1 calc(33.33% - 20px); /* Три кнопки на одной строке */
+  }
+  .button__list button:nth-child(4),
+  .button__list button:nth-child(5) {
+    flex: 1 1 calc(50% - 20px); /* Две кнопки занимают половину ширины */
+  }
 }
 
 .button__btn {

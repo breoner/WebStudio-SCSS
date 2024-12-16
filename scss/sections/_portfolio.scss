@@ -12,11 +12,20 @@
 }
 
 &__item {
-  flex-basis: calc((100% - 60px) / 3);
+  flex-basis: calc((100% - 60px) / 1);
   border: 1px solid #eeeeee;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+
 
   &:hover {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12),
@@ -79,13 +88,32 @@
 
 }
 
-
+.button__container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  justify-content: center; 
+}
 
 .button__list {
   display: flex;
   gap: 8px;
   justify-content: center;
   margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    button:nth-child(1),
+    button:nth-child(2),
+    button:nth-child(3) {
+      flex: 1 1 calc(33.33% - 20px); /* Три кнопки на одной строке */
+    }
+  
+    button:nth-child(4),
+    button:nth-child(5) {
+      flex: 1 1 calc(50% - 20px); /* Две кнопки занимают половину ширины */
+    }
+  }
+
 }
 
 .button__btn {
